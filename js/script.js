@@ -39,5 +39,8 @@ const ourTeam =  [
 
 ];
 
-console.log(ourTeam);
-console.log(ourTeam[0].name);
+
+for(let key in ourTeam){
+    console.log(`Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role} Image: ${ourTeam[key].image}`);
+    
+}
