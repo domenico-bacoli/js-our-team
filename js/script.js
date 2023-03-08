@@ -1,4 +1,3 @@
-
 ourTeamListEl = document.getElementById("our-team-list");
 
 const ourTeam =  [
@@ -37,7 +36,6 @@ const ourTeam =  [
         role: "Graphic Designer",
         image: "img/barbara-ramos-graphic-designer.jpg"
     },
-
 ];
 
 for(let key in ourTeam){

@@ -26,12 +26,13 @@ main header .text{
     max-width: 600px;
 }
 
-main header .text p{
-    line-height: 3.4ch;
+main header .text h1{
+    padding-bottom: 20px;
 }
 
-main header h1{
-    padding-bottom: 20px;
+main header .text p{
+    font-size: 14px;
+    line-height: 3.4ch;
 }
 
 main #container #our-team-list{
