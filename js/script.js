@@ -5,37 +5,37 @@ const ourTeam =  [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        image: "wayne-barnett-founder-ceo.jpg"
+        image: "../img/wayne-barnett-founder-ceo.jpg"
     },
 
     {
         name: "Angela Caroll",
         role: "Chief Editor",
-        image: "angela-caroll-chief-editor.jpg"
+        image: "../img/angela-caroll-chief-editor.jpg"
     },
 
     {
         name: "Walter Gordon",
         role: "Office Manager",
-        image: "walter-gordon-office-manager.jpg"
+        image: "../img/walter-gordon-office-manager.jpg"
     },
 
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        image: "angela-lopez-social-media-manager.jpg"
+        image: "../img/angela-lopez-social-media-manager.jpg"
     },
 
     {
         name: "Scott Estrada",
         role: "Developer",
-        image: "scott-estrada-developer.jpg"
+        image: "../img/scott-estrada-developer.jpg"
     },
 
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        image: "barbara-ramos-graphic-designer.jpg"
+        image: "../img/barbara-ramos-graphic-designer.jpg"
     },
 
 ];
@@ -47,8 +47,6 @@ for(let key in ourTeam){
 createElement();
  
 
-
-
 //_________FUNZIONI_________
 
 function createElement(){
@@ -57,7 +55,11 @@ function createElement(){
         let newLiElement = document.createElement("li");
         newLiElement.classList.add("team-member");
         ourTeamListEl.append(newLiElement);
-        newLiElement.innerText = `Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role} Image: ${ourTeam[key].image}`; 
+        let newImageLiElement = document.createElement("img");
+        newImageLiElement.classList.add("team-member-image");
+        newLiElement.append(newImageLiElement);
+        newImageLiElement.src = ourTeam[key].image;
+        // newLiElement.innerText = `Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role}`; 
     }
 }
 
