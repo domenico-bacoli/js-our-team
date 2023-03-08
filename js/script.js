@@ -1,4 +1,6 @@
 
+ourTeamListEl = document.getElementById("our-team-list");
+
 const ourTeam =  [
     {
         name: "Wayne Barnett",
@@ -36,11 +38,32 @@ const ourTeam =  [
         image: "barbara-ramos-graphic-designer.jpg"
     },
 
-
 ];
 
-
 for(let key in ourTeam){
-    console.log(`Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role} Image: ${ourTeam[key].image}`);
-    
+    console.log(`Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role} Image: ${ourTeam[key].image}`);    
 }
+
+createElement();
+ 
+
+
+
+//_________FUNZIONI_________
+
+function createElement(){
+
+    for(let key in ourTeam){
+        let newLiElement = document.createElement("li");
+        newLiElement.classList.add("team-member");
+        ourTeamListEl.append(newLiElement);
+        newLiElement.innerText = `Nome: ${ourTeam[key].name} Cognome: ${ourTeam[key].role} Image: ${ourTeam[key].image}`; 
+    }
+}
+
+
+
+
+
+
+
